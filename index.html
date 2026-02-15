@@ -594,6 +594,64 @@ input[type=range]:focus { outline:2px solid var(--fire); outline-offset:4px; }
   .ov-grid{grid-template-columns:1fr 1fr;} .atcf-bar-desc{display:none;}
   .deco-tabs{flex-direction:column;} .lc-result{flex-direction:column;}
 }
+
+/* ── EVIDENCE EXPLORER ─────────────────────────────────────────── */
+.ev-intro{font-size:15px;color:var(--text-2);line-height:1.75;margin-bottom:28px;max-width:680px;}
+.ev-filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;}
+.ev-filter{padding:8px 18px;border-radius:50px;border:1px solid var(--border);background:var(--bg-2);
+  color:var(--text-2);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;transition:all var(--T);}
+.ev-filter:hover{border-color:var(--text-3);color:var(--text-1);}
+.ev-filter:focus{outline:2px solid var(--fire);outline-offset:2px;}
+.ev-filter.fa{background:var(--bg-3);border-color:var(--text-2);color:var(--text-1);}
+.ev-filter.ft1{background:var(--fire-glow);border-color:var(--fire);color:var(--fire-light);}
+.ev-filter.ft2{background:var(--ice-glow);border-color:var(--ice);color:var(--ice-light);}
+.ev-filter.ft3{background:rgba(201,168,76,.13);border-color:var(--gold);color:var(--gold);}
+.ev-tier-group{margin-bottom:48px;}
+.ev-tier-hdr{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.ev-badge{font-family:'Fira Code',monospace;font-size:10px;padding:4px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:1.5px;white-space:nowrap;font-weight:500;}
+.ev-badge.t1{background:var(--fire-glow);border:1px solid var(--border-fire);color:var(--fire-light);}
+.ev-badge.t2{background:var(--ice-glow);border:1px solid var(--border-ice);color:var(--ice-light);}
+.ev-badge.t3{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);color:var(--gold);}
+.ev-tier-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--text-1);font-weight:600;}
+.ev-tier-sub{font-size:13px;color:var(--text-3);margin-top:2px;}
+.ev-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;transition:border-color var(--T);}
+.ev-card.t1:hover,.ev-card.t1.open{border-color:var(--border-fire);}
+.ev-card.t2:hover,.ev-card.t2.open{border-color:var(--border-ice);}
+.ev-card.t3:hover,.ev-card.t3.open{border-color:rgba(201,168,76,.35);}
+.ev-trigger{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;cursor:pointer;
+  width:100%;background:none;border:none;text-align:left;color:inherit;font-family:inherit;transition:background var(--T);}
+.ev-trigger:hover{background:rgba(255,255,255,.025);}
+.ev-trigger:focus{outline:2px solid var(--fire);outline-offset:-2px;}
+.ev-left{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0;}
+.ev-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.ev-tag{font-family:'Fira Code',monospace;font-size:10px;color:var(--text-3);
+  background:var(--bg-2);border:1px solid var(--border);border-radius:3px;padding:2px 7px;}
+.ev-claim{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--text-1);line-height:1.45;}
+.ev-conf{display:flex;align-items:center;gap:8px;margin-top:4px;}
+.ev-conf-lbl{font-size:11px;color:var(--text-3);font-family:'Fira Code',monospace;white-space:nowrap;}
+.ev-conf-track{flex:1;max-width:120px;height:4px;border-radius:2px;background:var(--bg-2);overflow:hidden;}
+.ev-conf-fill{height:100%;border-radius:2px;}
+.ev-conf-fill.t1{background:linear-gradient(90deg,var(--fire),var(--fire-light));}
+.ev-conf-fill.t2{background:linear-gradient(90deg,var(--ice),var(--ice-light));}
+.ev-conf-fill.t3{background:linear-gradient(90deg,var(--gold),#e8d070);}
+.ev-arrow{width:28px;height:28px;border-radius:6px;background:var(--bg-2);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--text-3);
+  flex-shrink:0;margin-top:2px;transition:transform var(--T);}
+.ev-card.open .ev-arrow{transform:rotate(180deg);}
+.ev-panel{display:none;padding:0 20px 20px;border-top:1px solid var(--border);}
+.ev-card.open .ev-panel{display:block;}
+.ev-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:18px;}
+@media(max-width:700px){.ev-grid{grid-template-columns:1fr;}}
+.ev-block{background:var(--bg-2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;}
+.ev-blbl{font-family:'Fira Code',monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;}
+.ev-blbl.d{color:var(--fire);}
+.ev-blbl.s{color:var(--ice);}
+.ev-blbl.r{color:var(--gold);}
+.ev-btext{font-size:13px;color:var(--text-2);line-height:1.65;}
+.ev-btext strong{color:var(--text-1);}
+.ev-btext em{font-style:italic;}
+.ev-empty{text-align:center;padding:60px 20px;color:var(--text-3);font-size:15px;}
+
 </style>
 </head>
 <body>
@@ -644,6 +702,10 @@ input[type=range]:focus { outline:2px solid var(--fire); outline-offset:4px; }
     <a class="nav-item" role="listitem" href="#" onclick="show(4);return false;">
       <span class="nav-n">◎</span>
       <div class="nav-t"><div class="nav-t-main">Reflection &amp; Glossary</div><div class="nav-t-sub">Key terms + your responses</div></div>
+    </a>
+    <a class="nav-item" role="listitem" href="#" onclick="show(5);return false;">
+      <span class="nav-n">⬡</span>
+      <div class="nav-t"><div class="nav-t-main">Evidence Explorer</div><div class="nav-t-sub">Tier 1 · 2 · 3 — what's proven</div></div>
     </a>
   </div>
   <div class="sidebar-foot">
@@ -1581,6 +1643,24 @@ input[type=range]:focus { outline:2px solid var(--fire); outline-offset:4px; }
   </div>
 </section>
 
+
+<section class="sec" id="sec-5" aria-labelledby="s5-h">
+  <div class="sec-eye">Evidence</div>
+  <h2 id="s5-h" class="sec-h">Evidence Explorer</h2>
+  <p class="sec-intro">Every key claim in this module rests on evidence — but not all evidence is equal. Use this explorer to see exactly what's proven, what's promising, and where we're making a theoretical extension. Click any claim to open its full evidence panel.</p>
+  <p class="ev-intro">Claims are organized into three tiers matching the preface document. <strong style="color:var(--fire-light)">Tier 1</strong> is established science — replicated, with dose-response relationships documented. <strong style="color:var(--ice-light)">Tier 2</strong> is active frontier research — real and promising, still being worked out. <strong style="color:var(--gold)">Tier 3</strong> is theoretical extension — intellectually serious, not yet empirically validated for human social systems.</p>
+  <div class="ev-filter-bar" role="group" aria-label="Filter evidence by confidence tier">
+    <button class="ev-filter fa" id="evf-all" onclick="evFilter('all')">All Claims</button>
+    <button class="ev-filter" id="evf-t1" onclick="evFilter('t1')">🔥 Tier 1 — Established</button>
+    <button class="ev-filter" id="evf-t2" onclick="evFilter('t2')">🧊 Tier 2 — Frontier</button>
+    <button class="ev-filter" id="evf-t3" onclick="evFilter('t3')">◈ Tier 3 — Theoretical</button>
+  </div>
+  <div id="evContent" aria-live="polite"></div>
+  <div class="sec-nav">
+    <button class="snav-btn" onclick="show(4)">← Journal &amp; Glossary</button>
+    <button class="snav-btn primary" onclick="show(-1)">← Back to Overview</button>
+  </div>
+</section>
   </div><!-- /sections -->
 </main>
 
@@ -1614,13 +1694,13 @@ function updateNav(idx) {
   document.querySelectorAll('.nav-item').forEach((item, i) => {
     item.classList.remove('active');
     item.removeAttribute('aria-current');
-    const map = [-1, 0, 1, 2, 3, 4];
+    const map = [-1, 0, 1, 2, 3, 4, 5];
     if (map[i] === idx) { item.classList.add('active'); item.setAttribute('aria-current','page'); }
   });
 }
 
 function updateProg() {
-  const total = 6;
+  const total = 7;
   const pct = Math.round(visited.size / total * 100);
   document.getElementById('progFill').style.width = pct + '%';
   document.getElementById('progBar').setAttribute('aria-valuenow', pct);
@@ -2092,16 +2172,174 @@ function filterGloss(q) {
   });
 }
 
+
+// ── EVIDENCE EXPLORER ────────────────────────────────────────────
+const EV_DATA = [
+  // TIER 1 ── ESTABLISHED SCIENCE
+  {tier:"t1",conf:95,sec:"Parts 1 & 2",
+   claim:"Chronic stress physically shrinks the prefrontal cortex",
+   data:"After 6 months of chronic stress: PFC gray matter volume decreases <strong>~15%</strong>; hippocampal volume decreases <strong>~8%</strong>. Working memory impaired <strong>~25%</strong>. Emotional regulation capacity reduced <strong>~30%</strong>. Replicated across multiple brain-imaging labs.",
+   src:"Arnsten, A.F.T. (2009). <em>Nature Reviews Neuroscience</em>, 10(6), 410–422. McEwen, B.S. (2007). <em>Physiological Reviews</em>, 87(3), 873–904. Lupien, S.J. et al. (2009). <em>Nature Reviews Neuroscience</em>, 10(6), 434–445.",
+   rel:"This is what the <strong>Sapolsky Mask</strong> IS — not a metaphor. The prefrontal region responsible for deliberate ethical reasoning is physically reduced by the chronic stress that extractive institutions routinely generate."},
+  {tier:"t1",conf:91,sec:"Part 3",
+   claim:"PFC damage from institutional stress is largely reversible",
+   data:"Cushing’s patients (cortisol-secreting tumors) showed hippocampal atrophy; after cortisol normalization, volume <strong>partially rebounded</strong>. Work-stress studies: after a stress-relief period, PFC volume recovered and cognitive flexibility returned. Aerobic exercise reverses age-related hippocampal shrinkage by ~2%.",
+   src:"McEwen, B.S. (2007). <em>Physiological Reviews</em>. Lupien et al. (2009). <em>Nature Reviews Neuroscience</em>. van Praag et al. (exercise/BDNF research).",
+   rel:"The framework’s insistence on <strong>cooling interventions</strong> — institutional redesign, not moral exhortation — is grounded here. Damage is not permanent if the entropy source is removed in time."},
+  {tier:"t1",conf:90,sec:"Part 1",
+   claim:"Ethical reasoning uses two measurably distinct neural pathways",
+   data:"fMRI: utilitarian judgments activate the <strong>dlPFC</strong>; deontological/emotional judgments activate the <strong>vmPFC</strong>. Manual-mode judgments take measurably longer. The Moral Machine experiment replicated the dual-process pattern across <strong>233 countries and territories</strong>.",
+   src:"Greene, J.D. et al. (2001). <em>Science</em>, 293(5537), 2105–2108. Awad, E. et al. (2018). <em>Nature</em>, 563, 59–64. Suter, R. & Hertwig, R. (2011).",
+   rel:"<strong>Automatic mode</strong> (fast, tribal) and <strong>manual mode</strong> (slow, values-based) are not metaphors — they have distinct anatomical signatures. Chronic stress specifically destroys manual-mode capacity while leaving automatic mode intact."},
+  {tier:"t1",conf:93,sec:"Part 2",
+   claim:"Retraining demands are a thermodynamic impossibility under chronic stress",
+   data:"Evans & Schamberg (2009): childhood poverty → chronic physiological stress → <strong>measurably reduced adult working memory</strong>, documented longitudinally. The cognitive demands of retraining require exactly the prefrontal resources that chronic stress destroys.",
+   src:"Evans, G.W. & Schamberg, M.A. (2009). <em>PNAS</em>, 106(16), 6545–6549.",
+   rel:"Rust Belt policy demanded retraining from workers whose <strong>Sapolsky Gate was already closed</strong>. Demanding manual-mode output from people in survival mode is not a moral failure — it is a biological constraint."},
+  {tier:"t1",conf:85,sec:"Part 3",
+   claim:"Stop-work authority reduces stress biomarkers by ~30%",
+   data:"Manufacturing studies: granting workers the right to halt unsafe processes reduced stress biological markers by approximately <strong>30%</strong>. Mechanism: restoring even partial control converts uncontrollable stress (maximally toxic) into controllable challenge stress (manageable).",
+   src:"NIOSH organizational stress research; Sapolsky, R. (2017). <em>Behave</em>. Maslach & Leiter burnout literature.",
+   rel:"The <strong>Conscience Gate</strong> concept has empirical precedent. Institutional control interventions produce measurable biological effects — before/after biomarkers, not just self-report surveys."},
+  {tier:"t1",conf:82,sec:"Part 4",
+   claim:"Rotating high-stress roles reduces PTSD incidence by ~40%",
+   data:"Medical workforce research: rotating professionals out of sustained high-stress exposure — rather than continuous assignment — reduced PTSD incidence by approximately <strong>40%</strong>. Duration of unrelieved exposure is the critical variable, not total exposure.",
+   src:"Healthcare workforce rotation studies; Maslach burnout literature.",
+   rel:"The <strong>Adaptive Moral Commonwealth</strong> is bio-compatible institutional design. Systemic rotation is not a perk — it is a biological necessity for sustained ethical capacity across a career."},
+  {tier:"t1",conf:88,sec:"Part 2",
+   claim:"Adolescent depression rose simultaneously across four English-speaking nations",
+   data:"Between 2012–2019, rates of depression, anxiety, loneliness, and self-harm rose sharply and <strong>simultaneously</strong> in the US, UK, Canada, and Australia — the precise window of mass smartphone adoption by adolescents.",
+   src:"Haidt, J. (2024). <em>The Anxious Generation</em>. Twenge, J.M. et al. (2018). <em>Clinical Psychological Science</em>.",
+   rel:"Cross-national simultaneity is the structural signature. When the same pattern appears at the same time across four countries with different cultures and governments, the explanation cannot be individual character failure — it is <strong>system design</strong>."},
+
+  // TIER 2 ── FRONTIER RESEARCH
+  {tier:"t2",conf:79,sec:"Part 1",
+   claim:"Landauer’s Principle: information erasure has a measurable minimum energy cost",
+   data:"E ≥ k<sub>B</sub>T ln 2 per bit erased (~0.003 eV at room temperature). Theorized 1961 by Rolf Landauer; <strong>experimentally confirmed in 2012</strong> by Bérut et al. using colloidal particles in a double-well optical trap.",
+   src:"Landauer, R. (1961). <em>IBM Journal of Research and Development</em>, 5(3), 183–191. Bérut, A. et al. (2012). <em>Nature</em>, 483, 187–189.",
+   rel:"The <strong>Fire/Ice thermodynamic framework</strong> is grounded in real physics. Every decision, belief update, and identity revision has an energy cost. The weight of a difficult moral choice is not psychological — it is a signature of physical work being done."},
+  {tier:"t2",conf:75,sec:"Parts 1 & 2",
+   claim:"Bioelectric fields encode biological form independently of DNA",
+   data:"Levin’s team manipulated planarian worm bioelectric networks. Cut fragments grew as <strong>two-headed worms</strong>. When those worms reproduced, offspring were <em>also</em> two-headed — despite <strong>100% wild-type genome</strong>. Body plan memory stored in bioelectric state, not DNA.",
+   src:"Levin, M. et al. (2019). <em>Biophysical Journal</em>. Levin, M. (2021). <em>Biosystems</em>.",
+   rel:"The <strong>Identity Kernel</strong> is not just metaphor for human selfhood — it names a real biological phenomenon. Information structures that persist across material change and guide reconstruction operate at multiple scales, from cells to persons to institutions."},
+  {tier:"t2",conf:70,sec:"All Parts",
+   claim:"All biological systems minimize prediction error as a fundamental operating principle",
+   data:"The Free Energy Principle (Friston): biological systems from single cells to complex brains actively minimize “surprisal” — the gap between expected and actual states. Supported by neuroimaging, computational modeling, and theoretical neuroscience across multiple independent labs.",
+   src:"Friston, K. (2010). <em>Nature Reviews Neuroscience</em>, 11(2), 127–138. Friston, K. et al. (2017). <em>Psychological Medicine</em>.",
+   rel:"Provides rigorous mathematical foundations for the <strong>ATCF framework</strong>. If agency is prediction-error minimization, then chronic environmental unpredictability is not merely stressful — it is a direct attack on the organism’s fundamental operating principle."},
+  {tier:"t2",conf:65,sec:"Part 2",
+   claim:"Assembly Theory provides a quantifiable measure of agential memory in molecular structures",
+   data:"Assembly Index (AI): the minimum number of steps required to assemble a molecule from elementary units. Complex molecules with high AI contain compressible information — evidence of selection. AI distinguishes living from non-living chemistry with high reliability in mass spectrometry tests.",
+   src:"Cronin, L. et al. (2021). <em>Nature Chemistry</em>. Marshall, S.M. et al. (2021).",
+   rel:"Provides a physical definition of “coherent information” that extends from chemistry to biology to social systems — the theoretical foundation for measuring <strong>Logical Depth</strong> at any scale."},
+
+  // TIER 3 ── THEORETICAL EXTENSION
+  {tier:"t3",conf:45,sec:"All Parts",
+   claim:"Human identity operates as a Holographic Semiosphere encoded on its relational boundary",
+   data:"The Bekenstein-Hawking entropy formula (S = k<sub>B</sub>c³A/4Għ) establishes that a region’s maximum information is proportional to its <strong>surface area</strong>, not volume. The HOS framework extends this by analogy: the self encodes its essential structure on its relational boundary (its Markov blanket).",
+   src:"Bekenstein, J.D. (1973). <em>Physical Review D</em>. ’t Hooft, G. (1993). Susskind, L. (1995). HOS framework theoretical extension.",
+   rel:"The underlying physics is <strong>established</strong>; the application to biological identity is a <strong>formal analogy</strong>, not a proven mechanism. Treat as a mathematically coherent framework that organizes observations — not a proven description of how identity physically operates."},
+  {tier:"t3",conf:40,sec:"All Parts",
+   claim:"Identity hierarchy is structured according to p-adic topology",
+   data:"P-adic number theory describes non-Euclidean, tree-like metric spaces where distance is defined by hierarchical similarity rather than linear proximity. Applied to identity: core values are closer to zero (central, resistant to change); peripheral habits and roles are at larger p-adic distance.",
+   src:"P-adic mathematics: Mahler (1981). Application to cognition: Khrennikov, A.Y. (1990s). Extension to identity hierarchy: HOS framework.",
+   rel:"An elegant model for why some aspects of self resist change more than others — and why entropy attacks on peripheral roles eventually reach the Identity Kernel. This is <strong>theoretical scaffolding</strong>, not established biology."},
+  {tier:"t3",conf:42,sec:"All Parts",
+   claim:"Good can be formally defined as actions that preserve or enhance agent coherence",
+   data:"Constructor Ethics: if agency is a thermodynamic achievement, then Good = any action or institution that preserves or enhances the Coherence (Logical Depth) of agents. Evil = entropy — forces that increase stress, fracture identity, or truncate the identity hierarchy.",
+   src:"HOS framework. Constructor Theory: Deutsch, D. & Marletto, C. (2015). <em>Proceedings of the Royal Society A</em>, 471.",
+   rel:"The most ambitious theoretical extension — a <strong>formal definition of moral good</strong> in thermodynamic terms. Logically coherent within the framework, but a philosophical proposal, not an established scientific result. Evaluate it as you would any ethical theory: by internal consistency and consequences for practice."},
+];
+
+let evFilter_cur = 'all';
+
+function evFilter(tier) {
+  evFilter_cur = tier;
+  const classes = {all:'fa', t1:'ft1', t2:'ft2', t3:'ft3'};
+  ['all','t1','t2','t3'].forEach(t => {
+    const b = document.getElementById('evf-' + t);
+    if (!b) return;
+    b.className = 'ev-filter' + (t === tier ? ' ' + classes[t] : '');
+  });
+  renderEvidence();
+}
+
+function evToggle(id) {
+  const card = document.getElementById(id);
+  if (!card) return;
+  card.classList.toggle('open');
+  const trigger = card.querySelector('.ev-trigger');
+  if (trigger) trigger.setAttribute('aria-expanded', card.classList.contains('open'));
+}
+
+function renderEvidence() {
+  const el = document.getElementById('evContent');
+  if (!el) return;
+  const data = evFilter_cur === 'all' ? EV_DATA : EV_DATA.filter(d => d.tier === evFilter_cur);
+  if (!data.length) { el.innerHTML = '<p class="ev-empty">No claims match this filter.</p>'; return; }
+
+  const TMETA = {
+    t1:{ cls:'t1', badge:'Tier 1', title:'Established Science',
+         sub:'High confidence — replicated across multiple independent laboratories, dose-response relationships documented, reversibility demonstrated' },
+    t2:{ cls:'t2', badge:'Tier 2', title:'Active Frontier Research',
+         sub:'Real and promising — peer-reviewed findings, but scientific community is still working out interpretation, scope, and applications' },
+    t3:{ cls:'t3', badge:'Tier 3', title:'Theoretical Extension',
+         sub:'Intellectually serious — logically coherent, built on real physics and biology, but not yet empirically validated for human social systems' },
+  };
+
+  let html = '';
+  ['t1','t2','t3'].forEach(tier => {
+    const items = data.filter(d => d.tier === tier);
+    if (!items.length) return;
+    const m = TMETA[tier];
+    html += `<div class="ev-tier-group">
+      <div class="ev-tier-hdr">
+        <span class="ev-badge ${m.cls}">${m.badge}</span>
+        <div><div class="ev-tier-title">${m.title}</div><div class="ev-tier-sub">${m.sub}</div></div>
+      </div>`;
+    items.forEach((item, i) => {
+      const uid = `evc-${tier}-${i}`;
+      html += `<div class="ev-card ${tier}" id="${uid}">
+        <button class="ev-trigger" onclick="evToggle('${uid}')" aria-expanded="false" aria-controls="${uid}-panel">
+          <div class="ev-left">
+            <div class="ev-meta"><span class="ev-tag">${item.sec}</span></div>
+            <div class="ev-claim">${item.claim}</div>
+            <div class="ev-conf">
+              <span class="ev-conf-lbl">Confidence</span>
+              <div class="ev-conf-track" role="progressbar" aria-valuenow="${item.conf}" aria-valuemin="0" aria-valuemax="100">
+                <div class="ev-conf-fill ${tier}" style="width:${item.conf}%"></div>
+              </div>
+              <span class="ev-conf-lbl">${item.conf}%</span>
+            </div>
+          </div>
+          <div class="ev-arrow" aria-hidden="true">▾</div>
+        </button>
+        <div class="ev-panel" id="${uid}-panel" role="region" aria-label="Evidence: ${item.claim}">
+          <div class="ev-grid">
+            <div class="ev-block"><div class="ev-blbl d">The Data</div><div class="ev-btext">${item.data}</div></div>
+            <div class="ev-block"><div class="ev-blbl s">Primary Sources</div><div class="ev-btext">${item.src}</div></div>
+            <div class="ev-block"><div class="ev-blbl r">Why It Matters Here</div><div class="ev-btext">${item.rel}</div></div>
+          </div>
+        </div>
+      </div>`;
+    });
+    html += '</div>';
+  });
+  el.innerHTML = html;
+}
+
 // ── KEYBOARD NAV ─────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
   if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
-  if (e.key === 'ArrowRight' && cur < 4) show(cur + 1);
+  if (e.key === 'ArrowRight' && cur < 5) show(cur + 1);
   if (e.key === 'ArrowLeft' && cur > -1) show(cur - 1);
 });
 
 // ── INIT ─────────────────────────────────────────────────────────
 show(-1);
 renderJournal();
+renderEvidence();
 </script>
 </body>
 </html>
